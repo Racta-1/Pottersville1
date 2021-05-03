@@ -1,0 +1,56 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>
+    {% block title %}
+    {% endblock title %}
+    
+    </title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{% static 'back/assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'back/assets/vendor/linearicons/style.css' %}">
+	<link rel="stylesheet" href="{% static 'back/assets/vendor/chartist/css/chartist-custom.css' %}">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{% static 'back/assets/css/main.css' %}">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'back/assets/img/apple-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'back/assets/img/favicon.png' %}">
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		
+		<!-- END LEFT SIDEBAR -->
+        {% block main %}
+        {% endblock main %}
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; 2019 <a href="#">Akinrele Taye</a>. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'back/assets/vendor/jquery-quicksearch/jquery.quicksearch.js' %}"></script>
+	<script src="{% static 'back/assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'back/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+	<script src="{% static 'back/assets/vendor/chartist/js/chartist.min.js' %}"></script>
+	<script src="{% static 'back/assets/scripts/klorofil-common.js' %}"></script>
+	<script>
+		$('input#search').quicksearch('table#table_search tbody tr');
+	</script>
+
+</body>
+
+</html>

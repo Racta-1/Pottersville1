@@ -1,0 +1,535 @@
+{% extends 'front/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+	{% block title %}
+		Pottersville Private School
+	{% endblock title %}
+    <body>
+
+		
+		{% block content %}
+		
+			<!-- Slider Area -->
+			<section class="home-slider">
+				<div class="slider-active">
+					<!-- Single Slider -->
+					<div class="single-slider overlay" style="background-image:url('{% static 'images/slider/slider1-bg7.jpg' %}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 col-md-8 col-12">
+									<div class="slider-text">
+										<h1>Welcome to <span>Pottersville </span>Private School</h1>
+										<p>...Models of Excellence</p>
+										<div class="button">
+											<!-- <a href="courses.html" class="btn primary">Our Courses</a> -->
+											<a href="#about" class="btn primary">About Us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<!-- Single Slider -->
+					<div class="single-slider overlay" style="background-image:url('{% static 'images/slider/slider1-bg5.jpg' %}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-12">
+									<div class="slider-text text-center">
+										<h1>Our<span> Mission </span></h1>
+										<p>We seek to Develop <span style="color:#ff9900;">Unique </span>Individuals with Love for Knowledge and Learning, Growing in Godliness and Equipped
+										for Leadeship by Ensuring that each Child Experiences Optimal Social, Emotional, Academic and Physical Success through a Challenging
+										and Progressive Child-Centered Educational Program in a safe and Healthy Learning Environment</p>
+										<div class="button">
+											<!-- <a href="courses.html" class="btn primary">Our Courses</a> -->
+											<a href="#about" class="btn primary">About Us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<!-- Single Slider -->
+					<div class="single-slider overlay" style="background-image:url('{% static 'images/slider/slider1-bg2.jpg' %}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-12">
+									<div class="slider-text text-center">
+										<h1>Our<span> Vision</span></h1>
+										<p>To Teach, Train and Transform through Educational Expertise, Internalised Discipline and Christ-like Example, 
+										Moulding and Inspiring Children to a Life of Excellence and Impact.</p>
+										<div class="button">
+											<!-- <a href="courses.html" class="btn primary">Our Courses</a> -->
+											<a href="#about" class="btn primary">About Us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<!-- Single Slider -->
+					<div class="single-slider overlay" style="background-image:url('{% static 'images/slider/slider1-bg3.jpg' %}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 offset-lg-4 col-md-8 offset-md-4 col-12">
+									<div class="slider-text text-right">
+										<h1>Our<span> Values</span></h1>
+										<p>A parent is the most important person ever in this institution, in person, on phone or by mail.
+										A parent is not dependent on us, we are dependent on him.
+										A parent is our guest, we show him what we have, make him comfortable and gain his trust and confidence.
+										A parent is not an interruption of our work, he is the purpose of it.
+										We are doing him a favour by serving him, he is doing us a favour by giving us the opportunity to do so.</p>
+										<p style="color:#ff9900;">....</p>
+										<div class="button">
+											<!-- <a href="courses.html" class="btn primary">Our Courses</a> -->
+											<a href="#about" class="btn primary">About Us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+					<div class="single-slider overlay" style="background-image:url('{% static 'images/slider/slider1-bg6.jpg' %}')">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 offset-lg-4 col-md-8 offset-md-4 col-12">
+									<div class="slider-text text-right">
+										<h1>School<span> Anthem</span></h1>
+										<p>Pottersville Private School</p>
+										<p>	Raising models of excellence</p>
+										<p>Inspiring knowledge instilling discipline</p>
+										<p>Building potential for leadership</p>
+										<p>In Pottersville we are equipped and inspired</p>
+										<p>For a brighter future</p>
+										<p>We live the life of excellence</p>
+										<p>In Christ likeness, impacting our world</p>
+										<p>POTTERSVILLE is the best</p>
+										<div class="button">
+											<!-- <a href="courses.html" class="btn primary">Our Courses</a> -->
+											<a href="#about" class="btn primary">About Us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/ End Single Slider -->
+				</div>
+			</section>
+			<!--/ End Slider Area -->
+			
+			<!-- Features -->
+			<section class="our-features section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title">
+								<h2>We Provide <span>Educational</span> Solutions</h2>
+								<p>We do more than teach children, we develop more than their educational backgroud, we improve their communication and problem solving skills.</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+								<!-- Single Feature -->
+								<div class="single-feature ">
+									<div class="feature-head">
+										<a href="{% url 'pottersville_app:gallery' %}#facilities"><img src="{% static 'images/school-1.jpg' %}" alt="#"></a>
+									</div>
+									<h2><a href="{% url 'pottersville_app:gallery' %}#facilities"><span style="color:#ff9900">Our</span> Facilities</a></h2>
+									<p>We provide the best facilities for the children with conducive classes and good equipments to stimulate and encourage the learning process.</p>	
+								</div>
+								<!--/ End Single Feature -->
+							</div>
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature ">
+								<div class="feature-head">
+									<a href="{% url 'pottersville_app:gallery' %}#music"><img src="{% static 'images/feature1.jpg' %}" alt="#"></a>
+								</div>
+								<h2><a href="{% url 'pottersville_app:gallery' %}#music"><span style="color:#ff9900">Our</span> Musicale</a></h2>
+								<p> Exposing children to music during early development helps them learn the sounds and meanings of words.</p>	
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature ">
+								<div class="feature-head">
+									<a href="{% url 'pottersville_app:gallery' %}#culture"><img src="{% static 'images/feature2.jpg' %}" alt="#"></a>
+								</div>
+								<h2><a href="{% url 'pottersville_app:gallery' %}#culture"><span style="color:#ff9900">Our</span> Culture</a></h2>
+								<p>It is important to preserve our cultural heritage, because it keeps our integrity as a people.</p>	
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Single Feature -->
+							<div class="single-feature ">
+								<div class="feature-head">
+									<a href="{% url 'pottersville_app:gallery' %}#sport"><img src="{% static 'images/feature3.JPG' %}" alt="#"></a>
+								</div>
+								<h2><a href="{% url 'pottersville_app:gallery' %}#sport"><span style="color:#ff9900">Our</span> Sport</a></h2>
+								<p>Physical activity stimulates growth and leads to improved physical and emotional health.</p>	
+							</div>
+							<!--/ End Single Feature -->
+						</div>
+							
+					</div>
+				</div>
+			</section>
+			<!-- End Features -->
+
+			<!-- Enroll -->
+			<section class="enroll overlay section" data-stellar-background-ratio="0.5" id="enroll">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1">
+							<div class="row">
+								<div class="col-lg-12 col-12">
+									<!-- Single Enroll -->
+									<div class="enroll-form">
+										<div class="form-title">
+											<h2>Enroll Today</h2>
+											<p>Before you miss the chance to get your seat!</p>
+										</div>
+										<!-- Form -->
+										<form action="{% url 'index' %}#enroll" method="POST" class="form" role="form">
+											{% if messages %}
+												<div class="text-center text-white badge badge-warning ">
+													<ul class="messages" style="list-style-type: none;">
+														{% for message in messages %}
+														<li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+														{{ message }}
+
+														</li>
+														{% endfor %}
+													</ul>
+												</div>
+                        					{% endif %}
+												
+											{% csrf_token %}
+											
+											{% for field in form %}
+												<div class="form-group">
+													<label>{{field.label_tag}}</label>
+													<span>{{field}} </span>
+												
+												</div>
+											{% endfor %}
+												
+											
+											<div class="form-group button">
+												<button type="submit" class="btn">Register Now</button>
+											</div>
+										</form>
+										<!--/ End Form -->
+									</div>
+									<!-- Single Enroll -->
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Enroll -->
+
+			<!-- Team -->
+			<section class="team section" id="staff">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title">
+								<h2>Our Awesome <span>Management</span></h2>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+				       <div class="col-lg-6 col-md-6 col-12">
+						<!-- Single Team -->
+						<div class="single-team">
+							<img src="{% static 'images/team/team1.jpg' %}" alt="#">
+							<div class="team-hover">
+								<h4>Akinrele Anike<span>Proprietress</span></h4>
+								<p>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today" -- Malcom X</p>
+								<ul class="social">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<!--/ End Single Team -->
+					</div>
+					   <div class="col-lg-6 col-md-6 col-12">
+						<!-- Single Team -->
+						<div class="single-team">
+							<img src="{% static 'images/team/team2.jpg' %}" alt="#">
+							<div class="team-hover">
+								<h4 class="name">Akinrele Remi<span class="work">School Director</span></h4>
+								<p>"Education is a powerful weapon with which you can use to change the world" -- Nelson Mandela</p>
+								<ul class="social">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<!--/ End Single Team -->
+					</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Team -->
+			
+			<!-- Testimonials -->
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title">
+								<h2><span>Great</span> Reviews</h2>
+								<p>Want to hear great reviews from our satisfied parents and students? Read below!</p>
+							</div>
+						</div>
+					</div>
+					<div class="row testimonials overlay section" data-stellar-background-ratio="0.5">
+						<div class="col-12">
+							<div class="testimonial-slider">
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-m.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">David Kekere-Ode</h4>
+										<p>
+                                        Congratulations Sir. May God Increase The School More & Bless You With Gift Of Men & With More Children That Are Teachable & With Great Destiny</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-m.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">Samson Traveljunkie</h4>
+										<p>The academc curriculum are standard. One of the best schools in the neighbourhood, but there is always a room for improvement of services</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-m.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">Ajao Babatunde</h4>
+										<p>A great school to be</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-f.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">Taiwo Olabisi</h4>
+										<p>This is a private school located in oke afa Road. The school won 2nd and 5th position in 2018, Ogun state "SPELLING BEE COMPETITION".This is an indication of the school's quality of teaching and knowledge they are impacting in their student. There is School bus service at reasonable costs for students that live at a far distance to the school.</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-m.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">Olamide Adebara</h4>
+										<p>It is a nice school in the environment for children, with qualified teachers and secured environment.</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-m.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">Akinwande Micheal</h4>
+										<p>Nice conducive learning environment.</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+								<!-- Single Testimonial -->
+								<div class="single-testimonial">
+									<img src="{% static 'images/test-m.png' %}" alt="#">
+									<div class="main-content">
+										<h4 class="name">TY Emmanuel</h4>
+										<p>Good school and quite competitive.</p>
+									</div>
+								</div>
+								<!--/ End Single Testimonial -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Other Team Members -->
+			
+			<!-- Events -->
+			<section class="events section" id="events">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title">
+								<h2>News & <span>Events</span></h2>
+								<p>Looking for events that will come up soon? Get the latest upcoming events!!! Here is the list of this term's events which will be spectacular and fabulous... Make sure you are part of everyone of them.</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="event-slider">
+							{% if event_list %}
+							{% for event in event_list %}
+								<!-- Single Event -->
+								<div class="single-event">
+									<div class="head overlay">
+										<img src="{{event.image.url}}" alt="#">
+										<a href="{{event.image.url}}" data-fancybox="photo" class="btn"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="event-content">
+										<div class="meta"> 
+											<span><i class="fa fa-calendar"></i>{{event.date_created}}</span>
+											<span><i class="fa fa-clock-o"></i>{{event.time_created}}</span>
+										</div>
+										<h4><a href="{{event.image.url}}" data-lightbox="gallery-mf">{{event.name}}</a></h4>
+										<p>{{event.desc}}</p>
+										
+									</div>
+								</div>
+								<!--/ End Single Event -->
+							{% endfor %}
+							{% endif %}	
+								<!-- Single Event -->
+								{% comment %} <div class="single-event">
+									<div class="head overlay">
+										<img src="{% static 'images/events/event2.jpg' %}" alt="#">
+										<a href="{% static 'images/events/event2.jpg' %}" data-fancybox="photo" class="btn"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="event-content">
+										<div class="meta">
+											<span><i class="fa fa-calendar"></i>03 July 2018</span>
+											<span><i class="fa fa-clock-o"></i>03.20-5.20PM</span>
+										</div>
+										<h4><a href="#">Best Student Award 2018</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt</p>
+										
+									</div>
+								</div> {% endcomment %}
+								<!--/ End Single Event -->
+								<!-- Single Event -->
+								{% comment %} <div class="single-event">
+									<div class="head overlay">
+										<img src="{% static 'images/events/event3.jpg' %}" alt="#">
+										<a href="{% static 'images/events/event3.jpg' %}" data-fancybox="photo" class="btn"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="event-content">
+										<div class="meta">
+											<span><i class="fa fa-calendar"></i>15 Dec 2018</span>
+											<span><i class="fa fa-clock-o"></i>12.30-5.30PM</span>
+										</div>
+										<div class="title">
+											<h4><a href="#">Student Workshop</a></h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt</p>
+										</div>
+										
+									</div>
+								</div> {% endcomment %}
+								<!--/ End Single Event -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Events -->
+
+			<!-- Fun Facts -->
+			<div class="fun-facts overlay" data-stellar-background-ratio="0.5">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-6">
+							<!-- Single Fact -->
+							<div class="single-fact">
+								<i class="fa fa-smile-o"></i>
+								<div class="number"><span class="counter">220</span>+</div>
+								<p>Satisfied Parents</p>
+							</div>
+							<!--/ End Single Fact -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-6">
+							<!-- Single Fact -->
+							<div class="single-fact">
+								<i class="fa fa-child"></i>
+								<div class="number"><span class="counter">200</span>+</div>
+								<p>Active Students</p>
+							</div>
+							<!--/ End Single Fact -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-6">
+							<!-- Single Fact -->
+							<div class="single-fact">
+								<i class="fa fa-male"></i>
+								<div class="number"><span class="counter">25</span>+</div>
+								<p>Staff</p>
+							</div>
+							<!--/ End Single Fact -->
+						</div>
+						<div class="col-lg-3 col-md-6 col-6">
+							<!-- Single Fact -->
+							<div class="single-fact">
+								<i class="fa fa-trophy"></i>
+								<div class="number"><span class="counter">3</span>+</div>
+								<p>Awards Won</p>
+							</div>
+							<!--/ End Single Fact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Fun Facts -->
+
+			<!-- About US -->
+			<section class="about-us section" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title">
+								<h2>About <span>Us</span></h2>
+								<p>Pottersville is focused on the future of young, brillant minds, instilling discipline and integrity and encouraging them to become more independent. </p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-12">
+							<div class="single-image overlay">
+								<img src="{% static 'images/about.jpg' %}" alt="#">
+								<a href="https://youtu.be/OjFwLGEojwA" class="btn video-popup mfp-fade"><i class="fa fa-play"></i></a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="about-text">
+								<h2>About Our Education</h2>
+								<p>Pottersville Private School is a top-flight  school with reputation for excellence in academic performance, moral standards and co-curricular achievements. You will find us amongst the top-rated school in the Nigeria.</p>
+
+                                <p>Our multi-curriculum teaching platform, which comes with a deliberate blend of Nigerian, British and American curriculums, puts our students on a pedestal for international education opportunities.  In addition to that, our dedication to quality academic standards and wholesome character build-up of our students reflects on why our students excel at various external examinations.</p>
+
+                                <p>We have a global approach to teaching and nurturing. We connect students to opportunities. We believe in the “Total Care” approach which is why we go further during external admissions process to assist our students through our experienced placement counsellors.</p>
+ 
+                                <p>We appreciate your interest in our school and trust that our website will guide you in making the best choice for your child’s educational future. We look forward to welcoming your child to our Pottersville Private School.</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End About US -->
+		{% endblock content %}
+		
+		

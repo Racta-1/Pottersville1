@@ -1,0 +1,230 @@
+{% extends 'front/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+	{% block title %}
+		Pottersville Private School
+	{% endblock title %}
+
+	{% block content %}
+		<!-- Gallery -->
+		<section class="gallery overlay section">
+			<div class="container">
+				<div class="row ">
+					<div class="col-12">
+						<div class="section-title">
+							<h2 class="text-white">Our <span>Album</span></h2>
+							<p class="text-white">This is a series of photographic prints collected by the school that portrays 
+							the activities done over the years. It includes pictures of the Facilities of the school, 
+							Musical Concert performed by the students, Cultural Day in which children and parents of different 
+							culture come together to showcase their how they dress, the food they eat and the way they dance, 
+							Interhouse Sport Competition between the school houses Red, Blue, Green and Yellow, and other activities 
+							such as Excursions, Visits to Motherless Babies Home, Christmas Party and the likes. 
+</p>
+						</div>
+												
+						
+					</div>
+				</div>
+			</div>
+			<div class="button text-center" >
+				<button class="btn primary" data-toggle="portfilter" data-target="all">
+					ALL
+				</button>
+				{% if category %}
+				{% for cat in category %}
+				<button class="btn primary" data-toggle="portfilter" data-target="{{cat.cat_name}}">
+					{{cat.cat_name}}
+				</button>
+				{% endfor %}
+				{% endif %}
+				
+			</div>
+		</section>
+			
+			<div class="clearfix"></div>
+			
+			<div class="container" id="music" data-tag="Musicale">
+				<div class="row pt-5">
+					<div class="col-12">
+						<div class="section-title">
+							
+                            <h2>Musicale</h2>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% if music_list %}
+						{% for music in music_list %}
+						<div class="col-lg-3 col-md-3 col-12 pb-4">
+							<div class="work-box">
+								<a href="{{music.gallery_img.url}}" data-lightbox="gallery-mf">
+								<div class="work-img">
+									<img src="{{music.gallery_img.url}}" alt="" class="img-fluid">
+								</div>
+								{% comment %} <div class="work-content">
+									<div class="row">
+										<div class="col-sm-8">
+											<h2 class="w-title">My Title</h2>
+										
+										
+										
+										</div>
+									</div>
+								</div> {% endcomment %}
+							</div>
+						</div>
+						{% endfor %}
+					{% endif %}
+				</div>
+                
+                
+			</div>
+			<div class="container clearfix" id="facilities" data-tag="Facilities">
+				<div class="row pt-5">
+					<div class="col-12">
+						<div class="section-title">
+							
+							<h2>Facilities</h2>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% if facilities_list %}
+						{% for fac in facilities_list %}
+						<div class="col-lg-3 col-md-3 col-12 pb-4">
+							<div class="work-box">
+								<a href="{{fac.gallery_img.url}}" data-lightbox="gallery-mf">
+								<div class="work-img">
+									<img src="{{fac.gallery_img.url}}" alt="" class="img-fluid">
+								</div>
+								{% comment %} <div class="work-content">
+									<div class="row">
+										<div class="col-sm-8">
+											<h2 class="w-title">My Title</h2>
+										</div>
+									</div>
+								</div> {% endcomment %}
+							</div>
+						</div>
+						{% endfor %}
+					{% endif %}
+				</div>
+				
+			
+			
+			</div>
+            <div class="container" id="culture" data-tag="Culture">
+				<div class="row pt-5">
+					<div class="col-12">
+						<div class="section-title">
+							
+                            <h2>Culture</h2>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+                {% if culture_list %}
+                {% for culture in culture_list %}
+					<div class="col-lg-3 col-md-3 col-12 pb-4">
+						<div class="work-box">
+							<a href="{{culture.gallery_img.url}}" data-lightbox="gallery-mf">
+							<div class="work-img">
+								<img src="{{culture.gallery_img.url}}" alt="" class="img-fluid">
+							</div>
+							{% comment %} <div class="work-content">
+								<div class="row">
+									<div class="col-sm-8">
+										<h2 class="w-title">My Title</h2>
+									</div>
+								</div>
+							</div> {% endcomment %}
+						</div>
+						<!--/ End Single Feature -->
+					</div>
+                {% endfor %}    
+                {% endif %}   
+				</div>                            
+			</div>
+            <div class="container" id="sport" data-tag="Sports">
+				<div class="row pt-5">
+					<div class="col-12">
+						<div class="section-title">
+							
+                            <h2>Sport</h2>
+							
+						</div>
+					</div>
+				</div>
+			    <div class="row">
+                {% if sport_list %}
+                {% for sport in sport_list %}
+					<div class="col-lg-3 col-md-3 col-12 pb-4">
+						<div class="work-box">
+							<a href="{{sport.gallery_img.url}}" data-lightbox="gallery-mf">
+							<div class="work-img">
+								<img src="{{sport.gallery_img.url}}" alt="" class="img-fluid">
+							</div>
+							{% comment %} <div class="work-content">
+								<div class="row">
+									<div class="col-sm-8">
+										<h2 class="w-title">My Title</h2>
+									</div>
+								</div>
+							</div> {% endcomment %}
+						</div>
+					</div>
+                {% endfor %}
+                {% endif %}
+                    
+				</div>
+                
+                
+                
+			</div>
+            <div class="container" data-tag="Others">
+				<div class="row pt-5">
+					<div class="col-12">
+						<div class="section-title">
+							
+                            <h2>Others</h2>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+                {% if other_list %}
+                {% for other in other_list %}
+					<div class="col-lg-3 col-md-3 col-12 pb-4">
+						<div class="work-box">
+							<a href="{{other.gallery_img.url}}" data-lightbox="gallery-mf">
+							<div class="work-img">
+								<img src="{{other.gallery_img.url}}" alt="" class="img-fluid">
+							</div>
+							{% comment %} <div class="work-content">
+								<div class="row">
+									<div class="col-sm-8">
+										<h2 class="w-title">My Title</h2>
+									</div>
+								</div>
+							</div> {% endcomment %}
+						</div>
+						
+					</div>
+                {% endfor %}
+                {% endif %}
+                    
+				</div>
+              
+			</div>
+
+		<!-- End Gallery -->
+	{% endblock content %}
+
+		
+		
+
+        

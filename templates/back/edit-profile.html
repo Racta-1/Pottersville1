@@ -1,0 +1,60 @@
+{% extends 'back/base.html' %}
+{% load static %}
+{% block title %}
+Edit Profile | Pottersville Admin
+{% endblock title %}
+
+{% block main %}
+{% include 'back/wrapper-navbar.html' %}
+
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <!-- OVERVIEW -->
+            <div class="panel panel-headline">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Profile</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-success">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                       {% for field in edit_key %}
+                        <form class="form-auth-small" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>{{ field.label_tag }}</label>
+                                <span> {{ field }}</span>
+                                {% if field.help_text %}
+                                <small style="color: grey">{{ field.help_text }}</small>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                            <button type="submit"class="btn btn-primary btn-block">
+                                Edit
+                            </button>
+                            
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- END OVERVIEW -->
+            
+        </div>
+    </div>
+    <!-- END MAIN CONTENT -->
+</div>
+<!-- END MAIN -->
+{% endblock main %}
+
+

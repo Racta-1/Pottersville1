@@ -1,0 +1,25 @@
+{% extends 'back/base.html' %}
+{% load static %}
+{% block title %}
+Login | Pottersville Admin
+{% endblock title %}
+{% block main %}
+    <div class="vertical-align-wrap">
+        <div class="vertical-align-middle">
+            <div class="auth-box ">
+                    <div class="content">
+                        <div class="header text-center">
+                            <div class="logo text-center"><img src="{% static 'back/assets/img/logo-dark.png' %}" alt="Klorofil Logo"></div>
+                            <h2> You are logged out </h2>
+                            <a href="{% url 'pottersville_app:login' %}" class="btn btn-primary">Click here to login again</a>
+                        </div>       
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+
+
+
+
+

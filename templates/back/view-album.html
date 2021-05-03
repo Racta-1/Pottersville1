@@ -1,0 +1,81 @@
+{% extends 'back/base.html' %}
+{% load static %}
+{% block title %}
+View Album | Pottersville Admin
+{% endblock title %}
+
+{% block main %}
+{% include 'back/wrapper-navbar.html' %}
+
+<!-- MAIN -->
+<div class="main">
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-headline">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">View Album</h3>
+                            <div class="right">
+                                <button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+                                <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+                            </div>
+                        </div>
+                        <div class="panel-body no-padding">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-success">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
+                            <table class="table table-striped" id="table_search">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Image</th>
+                                        <th>Date Created</th>
+                                        <th class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% if view_album %}
+                                    {% for album in view_album %}
+                                        <tr>
+                                            <td>{{album.name}}</td>
+                                            <td>{{album.category}}</td>
+                                            <td><img style="width:40px;" src="{{album.gallery_img.url}}"></img></td>
+                                            <td>{{album.date_created}}</td>
+                                            <td><a href="{% url 'pottersville_app:update-album' album.id %}">
+                                                <button type="button" class="btn btn-success btn-sm">
+                                                    <i class="fa fa-pencil-square-o"></i>
+                                                </button></a>
+                                            </td>
+                                            <td>
+                                                <form action="{% url 'pottersville_app:delete-album' album.id %}" method="post">{% csrf_token %}
+                                                    <button type="submit" class="btn btn-danger btn-sm">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </form>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END RECENT PURCHASES -->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- END MAIN CONTENT -->
+</div>
+<!-- END MAIN -->
+{% endblock main %}
+
+

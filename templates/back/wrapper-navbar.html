@@ -1,0 +1,70 @@
+{% load static %}
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="brand">
+        <a href="index.html"><img src="{% static 'back/assets/img/logo-dark.png' %}" alt="Klorofil Logo" class="img-responsive logo"></a>
+    </div>
+    <div class="container-fluid">
+        <div class="navbar-btn">
+            <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+        </div>
+        <form class="navbar-form navbar-left">
+            <div class="input-group">
+                <input type="text" id="search" class="form-control" placeholder="Search dashboard...">
+                <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+            </div>
+        </form>
+        <div id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{% static 'back/assets/img/user.png' %}" class="img-circle" alt="Avatar"> <span>{{user.username}}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'pottersville_app:edit-profile' %}"><i class="lnr lnr-user"></i> <span>Edit Profile</span></a></li>
+                        <li><a href="{% url 'password_reset' %}"><i class="fa fa-key"></i> <span>Reset Password</span></a></li>
+                        <li><a href="{% url 'pottersville_app:page-logout' %}"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END NAVBAR -->
+<!-- LEFT SIDEBAR -->
+<div id="sidebar-nav" class="sidebar">
+    <div class="sidebar-scroll">
+        <nav>
+            <ul class="nav">
+                <li><a href="{% url 'pottersville_app:dashboard' %}" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                <li>
+                    <a href="#category" data-toggle="collapse" class="collapsed"><i class="fa fa-object-group"></i> <span>Category</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                    <div id="category" class="collapse ">
+                        <ul class="nav">
+                            <li><a href="{% url 'pottersville_app:view-category' %}" class="">View Category</a></li>
+                            <li><a href="{% url 'pottersville_app:add-category' %}" class="">Add Category</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#album" data-toggle="collapse" class="collapsed"><i class="fa fa-file-image-o"></i> <span>Album</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                    <div id="album" class="collapse ">
+                        <ul class="nav">
+                            <li><a href="{% url 'pottersville_app:view-album' %}" class="">View Album</a></li>
+                            <li><a href="{% url 'pottersville_app:add-album' %}" class="">Add Album</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#event" data-toggle="collapse" class="collapsed"><i class="fa fa-calendar-o"></i> <span>Events</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                    <div id="event" class="collapse ">
+                        <ul class="nav">
+                            <li><a href="{% url 'pottersville_app:view-events' %}" class="">View Events</a></li>
+                            <li><a href="{% url 'pottersville_app:add-event' %}" class="">Add Event</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="{% url 'pottersville_app:page-logout' %}" class=""><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
