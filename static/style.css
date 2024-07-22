@@ -1032,13 +1032,68 @@ Version:	1.0
 .team .single-team {
 	position: relative;
 	margin-top: 30px;
+	display: flex;
+	justify-content: center; /* Centers the image horizontally */
+	align-items: center; /* Centers the image vertically */
+	height: 500px; /* Adjust the height as needed */
 }
-.team .single-team img{
-	height:100%;
-	width:100%;
-	text-align:center;
+
+.team .single-team img {
+	width: 100%; /* Adjust the width as needed */
+	height: auto; /* Maintain the aspect ratio */
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain; /* Ensure the image fits within the dimensions */
 }
-.team .team-hover {
+.team-hover {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 65%; /* Match the image width */
+	height: 400px; /* Adjust height to match image height */
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	opacity: 0;
+	transition: all 0.3s ease;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px; /* Increase font size */
+}
+
+.team-hover h4 {
+	font-size: 24px; /* Larger font size for header */
+	margin: 10px 0;
+}
+
+.team-hover p {
+	font-size: 18px; /* Larger font size for paragraph */
+	margin: 10px 0;
+}
+
+.team-hover ul {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0;
+	display: flex;
+	gap: 10px;
+}
+
+.team-hover ul li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.single-team:hover .team-hover {
+	opacity: 1;
+}
+
+/* .team .team-hover {
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -1060,7 +1115,7 @@ Version:	1.0
 	transform:scale(1.0);
 	opacity:1;
 	visibility:visible;
-}
+}*/
 .team .team-hover h4 {
 	color: #fff;
 	font-size: 20px;
@@ -1092,193 +1147,44 @@ Version:	1.0
 }
 .team .team-hover .social li a:hover{
 	opacity:0.6;
-}
-/* Teachers 2 */
-.team-style2 .single-team {
-	text-align: center;
-	margin-top: 30px;
-}
-.team-style2 .single-team .image{
-	position:relative;
-}
-.team-style2 .single-team .image:before{
-	position:absolute;
-	content:"";
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-	opacity:0;
-	visibility:hidden;
-	-webkit-transition:all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-	transition:all 0.4s ease;
-}
-.team-style2 .single-team:hover .image:before{
-	opacity:0.8;
-	visibility:visible;
-}
-.team-style2 .single-team.active .image:before{
-	opacity:0.8;
-	visibility:visible;
-}
-.team-style2 .single-team .image a {
+} */
+
+/* .team-hover {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	height: 50px;
-	width: 50px;
-	line-height: 50px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	opacity: 0;
+	transition: all 0.3s ease;
 	text-align: center;
-	color: #fff;
-	font-size: 20px;
-	background: rgba(0, 0, 0, 0.3);
-	color: #fff;
-	border-radius: 100%;
-	margin: -25px 0 0 -25px;
-	opacity:0;
-	visibility:hidden;
-	-webkit-transform:scale(3);
-	-moz-transform:scale(3);
-	transform:scale(3);
-}
-.team-style2 .single-team .image a:hover{
-	background:#fff;
-	color:#252525;
-}
-.team-style2 .single-team:hover .image a{
-	opacity:1;
-	visibility:visible;
-	transform:scale(1);
-}
-.team-style2 .single-team.active .image i{
-	opacity:1;
-	visibility:visible;
-}
-.team-style2 .single-team img{
-	height:100%;
-	width:100%;
-}
-.team-style2 .team-content .name {
-	font-size: 20px;
-	margin-top: 12px;
-}
-.team-style2 .team-content .name span {
-	display: block;
-	font-size: 14px;
-	color: #666;
-	margin-top: 5px;
-	font-weight: 500;
-}
-.team-style2 .team-content p {
-	margin-top: 12px;
-}
-.team-style2 .team-content .social {
-	margin-top: 12px;
-}
-.team-style2 .team-content .social li{
-	display:inline-block;
-	margin-right:10px;
-	color:#262b38;
-	transition:all 0.4s ease;
-	-webkit-transition:all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-}
-.team-style2 .team-content .social li:last-child{
-	margin-right:0px;
-}
-.team-style2 .team-content .social li a {
-	font-size: 14px;
-	color: #252525;
-}
-/* Teacher Single */
-.team-details{
-	padding: 60px 0 90px;
-}
-.team-details .member-detail,
-.team-details .detail-content{
-	margin-top:30px;
-}
-.team-details .member-detail{
-	text-align:center;
-}
-.team-details .member-detail img{
-	width:100%;
-}
-.team-details .member-detail .social {
-	margin-top: 20px;
-}
-.team-details .member-detail .social li{
-	display:inline-block;
-}
-.team-details .member-detail .social li:last-child{
-	margin-right:0px;
-}
-.team-details .member-detail .social li a {
-	height: 35px;
-	width: 35px;
-	line-height: 35px;
-	text-align: center;
-	background: #252525;
-	color: #fff;
-	display: block;
-	border-radius: 100%;
-}
-.team-details .address {
-	margin-top: 10px;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.team-details .address li a {
-	color: #252525;
+.team-hover h4, .team-hover p, .team-hover ul {
+	margin: 10px 0;
 }
-.team-details .address li i {
-	margin-right:10px;
+
+.team-hover ul {
+	list-style: none;
+	padding: 0;
 }
-.team-details .detail-content h2{
-	font-size:32px;
+
+.team-hover ul li {
+	display: inline-block;
+	margin: 0 5px;
 }
-.team-details .detail-content .title {
-	font-size: 16px;
-	margin: 0;
-}
-.team-details .detail-content p {
-	margin-top: 30px;
-}
-.team-details .detail-content .signature{
-	margin-top:50px;
-}
-/* Skill */
-.team-details .single-progress {
-	margin-top: 15px;
-}
-.team-details .single-progress h4 {
-	color: #252525;
-	font-size: 15px;
-	margin-bottom: 15px;
-}
-.team-details .single-progress p{
-	margin-bottom:0px;
-}
-.team-details .progress {
-	background: #f6f6f6;
-	border-radius: 0px;
-	border-radius: 30px 0 0 30px;
-	height: 10px;
-	overflow: visible;
-}
-.team-details .progress .progress-bar {
-	border-radius: 30px;
-	position: relative;
-}
-.team-details .progress .percent {
-	border-radius: 30px;
-	position: absolute;
-	right: 0;
-	top: -15px;
-	padding: 5px;
-	font-weight: 600;
-	display: table-cell;
-}
+
+.single-team:hover .team-hover {
+	opacity: 1;
+} */
 /*=============================
 	End Teachers CSS
 ===============================*/
